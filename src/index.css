@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #fbf6ef;
+  --color-gold-200: #f5e9d5;
+  --color-gold-300: #ebd3ae;
+  --color-gold-400: #dcb37d;
+  --color-gold-500: #cca062;
+  --color-gold-600: #be8a4d;
+  --color-gold-700: #9e6f3d;
+  --color-gold-800: #805732;
+  --color-gold-900: #68472a;
+  --color-gold-950: #382414;
+  
+  --color-bronze-50: #faf8f5;
+  --color-bronze-100: #f4efea;
+  --color-bronze-200: #e5d8cd;
+  --color-bronze-300: #d0baa8;
+  --color-bronze-400: #b89781;
+  --color-bronze-500: #a78067;
+  --color-bronze-600: #976e56;
+  --color-bronze-700: #7d5945;
+  --color-bronze-800: #664939;
+  --color-bronze-900: #543d31;
+  --color-bronze-950: #2d1f18;
+
+  --color-obsidian-50: #f6f6f6;
+  --color-obsidian-100: #e7e7e8;
+  --color-obsidian-200: #cfcfd1;
+  --color-obsidian-300: #a9aaae;
+  --color-obsidian-400: #7c7d84;
+  --color-obsidian-500: #5f6067;
+  --color-obsidian-600: #4c4d53;
+  --color-obsidian-700: #404146;
+  --color-obsidian-800: #1a1a1c;
+  --color-obsidian-900: #0f0f10;
+  --color-obsidian-950: #050506;
+}
+
+/* Base resets & styles */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-obsidian-950);
+  color: #f3f4f6;
+  font-family: var(--font-sans);
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 10, 10, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(204, 160, 98, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(204, 160, 98, 0.6);
+}
+
+/* Glassmorphism styling */
+.glass-panel {
+  background: rgba(15, 15, 16, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(204, 160, 98, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(15, 15, 16, 0.8);
+  border-color: rgba(204, 160, 98, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(204, 160, 98, 0.08);
+}
+
+/* Gold gradients and typography text effects */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fbf6ef 0%, #dcb37d 50%, #cca062 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(135deg, #dcb37d, #cca062, #805732) 1;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #ebd3ae 0%, #dcb37d 50%, #cca062 100%);
+}
+
+.bg-gold-glow {
+  box-shadow: 0 0 20px rgba(204, 160, 98, 0.4);
+}
+
+.bg-gold-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(204, 160, 98, 0.6);
+}
+
+/* Premium Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; filter: blur(4px); }
+  50% { opacity: 0.6; filter: blur(8px); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}

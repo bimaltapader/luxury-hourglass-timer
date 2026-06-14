@@ -2,7 +2,8 @@
 
 A premium, Apple-level interactive 3D landing page and meditation/focus companion. Experience time in its most beautiful, tactile form with realistic sand physics, real-time lighting, procedural audio ticking, and interactive controls.
 
-Live Dev Url: `http://localhost:5173`
+Live Dev Url: `https://luxury-hourglass-timer.vercel.app/`
+Developed by: bimaltapader.com
 
 ---
 
@@ -48,6 +49,28 @@ This application was engineered by translating the following user requests:
    > Change the sand color from white to real sand color which #A2876A.
 
 ---
+
+
+# 🛠️ How to Download and Run on your domain:
+Here is a guide on how to download, build, and host the AURA Luxury Hourglass Timer on your own custom domain (e.g., yourdomain.com).
+
+Depending on your setup, you can either use a Modern cloud platform (e.g., Vercel, Netlify) or a Traditional web host (e.g., Bluehost, Hostinger via FTP/cPanel).
+
+Option A: Using Vercel with a Custom Domain (Recommended & Free)
+If you have already deployed the site to Vercel, adding your custom domain is free, includes automated SSL (HTTPS), and takes only 2 minutes:
+
+Add Domain in Vercel:
+Go to your Vercel Dashboard and select your project.
+Go to Settings -> Domains.
+Enter your domain name (e.g., yourdomain.com or timer.yourdomain.com) and click Add.
+Configure DNS Records:
+Vercel will show you the exact DNS records to configure. Go to your domain registrar (e.g., GoDaddy, Namecheap, Google Domains) and add:
+A Record: Name: @, Value: 76.76.21.21
+CNAME Record (for www): Name: www, Value: cname.vercel-dns.com
+Go Live:
+Once DNS propagates (usually takes 1–5 minutes), Vercel will automatically generate an SSL certificate and your site will be live!
+
+
 
 ## 🛠️ How to Download & Run Locally
 
